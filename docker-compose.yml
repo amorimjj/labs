@@ -1,0 +1,15 @@
+version: '3.0'
+services:
+  labs:
+    image: "labs"
+    build:
+      context: .
+    volumes:
+       - $PWD:/opt/source
+    working_dir: /opt/source
+    ports:
+      - 8080:8080
+    command:
+      - tail
+      - "-f"
+      - "/dev/null"
