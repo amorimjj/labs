@@ -1,0 +1,15 @@
+{
+  "name": "balanced",
+  "version": "1.0.0",
+  "description": "Balanced string test",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.2"
+  }
+}
