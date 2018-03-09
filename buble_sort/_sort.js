@@ -7,7 +7,7 @@ let swap = function(arr, i, j) {
 }
 
 
-let _do = function(toOrder, i, flagged, compareFunction) {
+let _order = function(toOrder, i, flagged, compareFunction) {
 
 	let n = i+1, current = toOrder[i], next = toOrder[n];
 
@@ -17,11 +17,11 @@ let _do = function(toOrder, i, flagged, compareFunction) {
 	}
 	
 	if ( i < toOrder.length ) {
-		return _do(toOrder, n, flagged, compareFunction);
+		return _order(toOrder, n, flagged, compareFunction);
 	}
 
 	if ( flagged ) {
-		return _do(toOrder, 0, false, compareFunction);
+		return _order(toOrder, 0, false, compareFunction);
 	}
 
 	return toOrder;
@@ -29,7 +29,7 @@ let _do = function(toOrder, i, flagged, compareFunction) {
 }
 
 let order = function(toOrder, compareFunction) {
-	return _do(toOrder, 0, false, compareFunction);
+	return _order(toOrder, 0, false, compareFunction);
 };
 
 module.exports = order;
