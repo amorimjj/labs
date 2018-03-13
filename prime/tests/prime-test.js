@@ -6,7 +6,6 @@ let given = require('mocha-testdata').given;
 
 let isPrime  = require('./../prime');
 
-
 describe('Number primer tester', function() {
 
 	describe('For prime set', function() {
